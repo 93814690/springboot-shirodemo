@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @Description:
  * @Author: liyf
- * @Date: Created in 2018\10\11 0011 10:51
+ * @Date: Created in 2018\10\11 10:51
  */
 @Entity
 @Data
@@ -32,6 +32,6 @@ public class UserInfo implements Serializable {
      * @return
      */
     public String getCredentialsSalt(){
-        return this.username+this.salt;
+        return this.username + this.salt;
     }
 }
