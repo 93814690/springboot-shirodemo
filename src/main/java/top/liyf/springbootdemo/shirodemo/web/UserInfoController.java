@@ -17,8 +17,6 @@ import javax.annotation.Resource;
 @RequestMapping("/userInfo")
 public class UserInfoController {
 
-    @Resource
-    private UserInfoService service;
 
     @RequestMapping("/userList")
     @RequiresPermissions("userInfo:view")
