@@ -21,8 +21,20 @@ public class UserInfoController {
     private UserInfoService service;
 
     @RequestMapping("/userList")
-    @RequiresPermissions("userInfo:view")//权限管理;
+    @RequiresPermissions("userInfo:view")
     public String userInfo(){
         return "userInfo";
+    }
+
+    @RequestMapping("/userAdd")
+    @RequiresPermissions("userInfo:add")
+    public String userAdd(){
+        return "userAdd";
+    }
+
+    @RequestMapping("/userDel")
+    @RequiresPermissions("userInfo:del")
+    public String userDel(){
+        return "userDel";
     }
 }

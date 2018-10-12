@@ -47,7 +47,7 @@ public class MyShiroRealm extends AuthorizingRealm {
         //获取用户的输入的账号.
         String username = (String)token.getPrincipal();
         UserInfo userInfo = userInfoService.findByUsername(username);
-        System.out.println("----->>userInfo="+userInfo);
+        //System.out.println("----->>userInfo="+userInfo);
         if(userInfo == null){
             return null;
         }
