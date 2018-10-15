@@ -1,6 +1,7 @@
 package top.liyf.springbootdemo.shirodemo.entity;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -13,6 +14,7 @@ import java.util.List;
  */
 @Entity
 @Data
+@ToString(exclude = {"roles"})
 public class SysPermission implements Serializable {
     @Id
     @GeneratedValue

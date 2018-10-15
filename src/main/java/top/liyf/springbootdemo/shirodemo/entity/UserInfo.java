@@ -35,14 +35,4 @@ public class UserInfo implements Serializable {
         return this.username + this.salt;
     }
 
-    @Override
-    public String toString() {
-        return "UserInfo{" +
-                "uid=" + uid +
-                ", username='" + username + '\'' +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", salt='" + salt + '\'' +
-                '}';
-    }
 }
