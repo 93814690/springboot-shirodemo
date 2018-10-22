@@ -3,7 +3,10 @@ package top.liyf.springbootdemo.shirodemo.web;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import top.liyf.springbootdemo.shirodemo.result.ResultBean;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
@@ -47,6 +50,12 @@ public class HomeController {
         map.put("msg", msg);
         // 此方法不处理登录成功,由shiro进行处理
         return "/login";
+    }
+
+    @GetMapping("/test")
+    @ResponseBody
+    public ResultBean<Integer> justTest() {
+        return new ResultBean<>(1);
     }
 
 }
